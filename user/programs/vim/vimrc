@@ -1,0 +1,47 @@
+" This is specific to `Home Manager` and the way it sets up the Vim configuration. It automatically
+" adds `vim-sensible` as a plugin. I like having as few plugins as possible to simplify deployment.
+let s:useless = system('nix-env -q home-manager-path')
+if v:shell_error == 0
+  let g:loaded_sensible = 'yes'
+endif
+
+" Enable filetype support, supporting filetype-specific indentation, syntax
+" highlighting and other goodies.
+filetype plugin indent on
+
+" Enable syntax highlighting, overriding current color settings with defaults.
+syntax on
+
+set autoindent  " Copy indent from current line when starting a new line.
+set autoread  " Automatically read file when it's changed outside Vim.
+set backspace=indent,eol,start  " Make backspace in INSERT act more intuitively.
+set encoding=utf-8  " Set default encoding.
+set hidden  " Allow unsaved buffers in the background.
+set ignorecase  " Ignore case in search patterns.
+set incsearch  " Search buffer while typing search pattern.
+set lazyredraw  " Don't redraw screen while executing macros.
+set nojoinspaces  " Don't insert two spaces while joining lines.
+set number  " Display line numbers.
+set ruler  " Show line and column number.
+set shortmess+=I  " Don't show intro message when starting Vim.
+set smartcase  " If a search pattern contains uppercase, honor it.
+set splitbelow  " When splitting horizontally, the new window should be below the current one.
+set splitright  " When splitting vertically, the new window should be to the right of the current one.
+set textwidth=100  " Set maximum line length used by certain commands.
+set wildmenu  " Enable nicer command completion.
+
+if has('gui_running')
+  set guioptions-=m  " Disable menu bar.
+  set guioptions-=T  " Disable tool bar.
+  set guioptions-=L  " Disable left scroll bar.
+  set guioptions-=r  " Disable right scroll bar.
+  set guifont=Source_Code_Pro:h10
+endif
+
+" Use terminal emulator colors for seamless transition between the terminal and Vim.
+set termguicolors
+
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
+
+nnoremap <Leader>zn :call zk#CreateZettel()<CR>
