@@ -35,7 +35,7 @@ if has('gui_running')
   set guioptions-=T  " Disable tool bar.
   set guioptions-=L  " Disable left scroll bar.
   set guioptions-=r  " Disable right scroll bar.
-  set guifont=Source_Code_Pro:h10
+  set guifont=Iosevka_Extended:h10
 endif
 
 " Use terminal emulator colors for seamless transition between the terminal and Vim.
@@ -43,5 +43,8 @@ set termguicolors
 
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
+
+" Make <Esc> properly exit insert mode in vertical block mode.
+inoremap <C-c> <Esc>
 
 nnoremap <Leader>zn :call zk#CreateZettel()<CR>
