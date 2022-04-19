@@ -26,7 +26,7 @@
       cursorColor = "#ebdbb2";
       foreground = "#ebdbb2";
     };
-    fonts = [ "xft:Iosevka Extended:size=10" ];
+    fonts = [ "xft:DejaVu Sans Mono:size=9" ];
     scroll.bar.enable = false;
   };
 }

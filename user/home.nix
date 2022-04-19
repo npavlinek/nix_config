@@ -18,6 +18,7 @@ in {
   ] ++ fontList;
 
   programs = {
+    chromium.enable = true;
     firefox.enable = true;
     man.generateCaches = true;
   };

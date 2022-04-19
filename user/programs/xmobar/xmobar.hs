@@ -1,5 +1,5 @@
 Config
-  { font = "xft:Iosevka Extended:size=8"
+  { font = "xft:DejaVu Sans Mono:size=8"
   , bgColor = "black"
   , fgColor = "#ebdbb2"
   , commands = [ Run Brightness [ "-t", "BR: <percent>%"
