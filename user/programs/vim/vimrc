@@ -21,9 +21,9 @@ set ignorecase  " Ignore case in search patterns.
 set incsearch  " Search buffer while typing search pattern.
 set lazyredraw  " Don't redraw screen while executing macros.
 set nojoinspaces  " Don't insert two spaces while joining lines.
-set number  " Display line numbers.
 set ruler  " Show line and column number.
 set shortmess+=I  " Don't show intro message when starting Vim.
+set showbreak=↵\  " Show an indicator for wrapped lines.
 set smartcase  " If a search pattern contains uppercase, honor it.
 set splitbelow  " When splitting horizontally, the new window should be below the current one.
 set splitright  " When splitting vertically, the new window should be to the right of the current one.
